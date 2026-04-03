@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
+import { toast } from 'sonner'
 
 const Logout = () => {
     const Navigate = useNavigate()
@@ -20,14 +21,15 @@ const Logout = () => {
             const data = res.json()
          if(data.sucess){
             console.log(data.message)
-         }
-        } catch (error) {
-            console.log(error)
+            toast.success("Logged out successfully")
         }
-
+    } catch (error) {
+        console.log(error)
+    }
+    
         localStorage.removeItem("jwttoken")
 
-        Navigate("/login")
+        Navigate("/signin")
      };
     
      

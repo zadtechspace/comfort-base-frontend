@@ -1,18 +1,19 @@
 import React from 'react'
 import { Outlet, Route, Routes } from 'react-router-dom'
 import Navbar from '../../Components/Navbar'
-import Products from '../../PublicFolder/Pages/ProductList'
-import Order from './Order'
-import Contact from '../../PublicFolder/Pages/Contact'
-import Carts from './Carts'
-import Profile from './Profile'
-import DashboardIndex from "./DashboardIndex"
-import { Bell, Search, User } from "lucide-react";
-import UserNavbar from '../Components/UserNavbar'
-import ProductList from '../../PublicFolder/Pages/ProductList'
+import Products from '../../Components/Products'
+import Order from '../Pages/Order'
+import Carts from '../Pages/Carts'
+import Profile from '../Pages/Profile'
+import DashboardIndex from "../Pages/DashboardIndex"
+import Checkout from '../Pages/Checkout'
 
 
 const userNavbarItems = [
+    {
+        label:"Dashboard",
+        path:"/user/dashboard"
+    },
     {
         label:"Products",
         path:"/user/products",
@@ -23,21 +24,13 @@ const userNavbarItems = [
         path:"/user/order"
     },
     {
-        label:"Contact",
-        path:"/user/contact"
-    },
-    {
         label:"Carts",
         path:"/user/cart"
     },
-    {
-        label:"Profile",
-        path:"/user/profile"
-    },
-    {
-        label:"Admin",
-        path:"/admin"
-    },
+    // {
+    //     label:"Admin",
+    //     path:"/admin"
+    // },
     
     {
         label:"logout",
@@ -65,20 +58,17 @@ const DashboardLayout = () => {
         
         <Routes>
             
-            <Route path={'/' }element={<DashboardIndex/>}/>
+            <Route path={'/dashboard'} element={<DashboardIndex/>}/>
 
-            <Route path={'/products'} element={<ProductList/>}/>
+            <Route path={'/products'} element={<Products/>}/>
             <Route path={'/order'} element={<Order/>}/>
-            <Route path={'/contact' }element={<Contact/>}/>
             <Route path={'/cart'} element={<Carts/>}/>
             <Route path={'/profile'} element={<Profile/>}/>
+            <Route path={'/checkout'} element={<Checkout/>}/>
 
             
         </Routes>
 
-        <Bell/>
-        <Search/>
-        <User/>
     
     {/* <Outlet/> */}
     </div>

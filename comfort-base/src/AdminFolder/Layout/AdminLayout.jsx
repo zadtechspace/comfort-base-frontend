@@ -8,11 +8,13 @@ import OrdersTable from '../Components/OrdersTable'
 import SalesChart from '../Components/SalesChart'
 import Settings from '../Components/Settings'
 import ProductList from '../../PublicFolder/Pages/ProductList'
+import ProductCard from '../../Components/ProductCard'
+import Products from '../../Components/Products'
 // import { Routes } from 'react-router-dom'
 
 
 
-const AdminLayout = () => {
+const AdminLayout = ({product}) => {
   return (
     <div className=''> 
 
@@ -33,7 +35,7 @@ const AdminLayout = () => {
             <main style={{padding:'1rem', width:'100%' }}>
                 <Routes>
                     <Route path='/' element={ <AdminDashboard/>}/>
-                    <Route path='/product' element={ <ProductList/>}/>
+                    <Route path='/product' element={ <Products/>}/>
 
                     <Route path='/orders' element={ <OrdersTable/>}/>
                     <Route path='/salecharts' element={ <SalesChart/>}/>

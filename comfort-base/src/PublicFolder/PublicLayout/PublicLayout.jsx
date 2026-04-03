@@ -3,7 +3,6 @@ import Navbar from '../../Components/Navbar'
 import Homepage from '../Pages/Homepage'
 import { Route, Routes } from 'react-router-dom'
 import Aboutus from '../Pages/Aboutus'
-import Contact from '../Pages/Contact'
 import Signup from '../Pages/Signup'
 import Signin from '../Pages/Signin'
 import ProductList from '../Pages/ProductList'
@@ -12,6 +11,7 @@ import Logout from '../Pages/Logout'
 import VerifyUser from '../Pages/VerifyUser'
 import Finduserbyemail from '../Pages/Forgotpassword/FindUserbyemail'
 import UpdatePassword from '../Pages/Forgotpassword/UpdatePassword'
+import Products from '../../Components/Products'
 
 const PublicLayout = () => {
   return (
@@ -23,11 +23,10 @@ const PublicLayout = () => {
 
         <Routes>
             <Route path={"/"} element={<Homepage/>}/>
-            <Route path={"/productlist"} element={<ProductList/>}/>
-            <Route path={"/contact"} element={<Contact/>}/>
+            <Route path={"/products"} element={<Products/>}/>
             <Route path={"/aboutUs"} element={<Aboutus/>}/>
             <Route path={"/signUp"} element={<Signup/>}/>
-            <Route path={"/login"} element={<Signin/>}/>
+            <Route path={"/signin"} element={<Signin/>}/>
             <Route path={"/forgotpassword"} element={<Finduserbyemail/>}/>
             <Route path={"/forgotpassword/:token"} element={<UpdatePassword/>}/>
             <Route path={"/verifyuser/:token"} element={<VerifyUser/>}/>

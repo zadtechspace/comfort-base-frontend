@@ -39,7 +39,7 @@ const addtocart = async(products)=>{
      const cartItem ={
       name:products.title,
       productprice:products.price,
-      image:products.image,
+      image:products.images[0],
       quantity: 1,
       
      }
@@ -80,26 +80,26 @@ useEffect(() => {
   return (
     <div className='grid grid-cols-3 gap-12 py-8 px-6 w-full bg-gray-500 text-gray-600'>
           {
-            products.map((item, key)=>(
-              <div key={key} className='flex flex-col bg-white gap-6 items-center justify-between rounded-4xl shadow-2xl text-sm py-6  '>
+            products.map((product)=>(
+              <div key={product.id} className='flex flex-col bg-white gap-6 items-center justify-between rounded-4xl shadow-2xl text-sm py-6  '>
 
                 <div className='w-full place-items-center p-6 h-full'>
-                  <img src={item.image}  alt="" className=' h-full w-48'/>
+                  <img src={product.images[0]}  alt="" className=' h-full w-48'/>
                 </div>
 
 
                 <div className='w-full grid gap-2 p-4 h-full'>
 
-                    <p><b>Title:</b> {item.title}</p>
-                    <p><b>Category:</b> {item.category}</p>
-                    <p><b>Description: </b>{item.description}</p>
-                    <p><b>Price: #</b>{item.price}</p>                 
-                  
+                    <p><b>Title:</b> {product.title}</p>
+                    <p><b>Category:</b> {product.category}</p>
+                    {/* <p><b>Description: </b>{product.description}</p> */}
+                    <p><b>Price: #</b>{product.price}</p>                 
+  
                 </div>
 
                 <div className='flex gap-2 items-center'>
-                    <Link className='bg-green-800 text-white py-2 px-8 rounded-3xl'  to={`/products/${item.id}`}>View Product</Link>
-                    <button className='bg-blue-800 text-white py-2 px-8 rounded-3xl' onClick={()=>addtocart(item)}>Add to cart</button>
+                    <Link className='bg-green-800 text-white py-2 px-8 rounded-3xl'  to={`/products/${product.id}`}>View Product</Link>
+                    <button className='bg-blue-800 text-white py-2 px-8 rounded-3xl' onClick={()=>addtocart(product)}>Add to cart</button>
                 </div>
 
                     

@@ -12,7 +12,7 @@ const token = localStorage.getItem("jwttoken")
   useEffect(() => {
 
     if(token === null){
-      navigate("/login")
+      navigate("/signin")
     }
    
   const doVerifyToken = async(Data)=>{
@@ -32,10 +32,10 @@ const token = localStorage.getItem("jwttoken")
           const data =await res.json()
         
           if(data.success){
-            navigate("/user")
+            navigate("/user/dashboard")
           }
           else{
-            navigate("/login")
+            navigate("/signin")
           }
         } catch (error) {
           console.log(error)

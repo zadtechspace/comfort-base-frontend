@@ -26,7 +26,7 @@ const UpdatePassword= () => {
 
           if(data.success){
             console.log("Password reset successfully")
-            Navigate("/login")
+            Navigate("/signin")
 
           }
 

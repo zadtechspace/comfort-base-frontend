@@ -84,7 +84,7 @@ const Finduserbyemail = () => {
         </form>
 
         <p className="mt-6 text-center text-sm">
-        <a href="/login" className="text-blue-600 hover:underline">Back to Login</a>
+        <a href="/signin" className="text-blue-600 hover:underline">Back to Login</a>
         </p>
     </div>
 
