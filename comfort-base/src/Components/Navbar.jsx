@@ -44,7 +44,7 @@ const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
           
           {/* Logo */}
           <div className='flex-shrink-0'>
-            <Link to={'/'} className='flex items-center'>
+            <Link to={'/user/dashboard'} className='flex items-center'>
               <img src={comfortbaselogo} className='w-10 h-10 rounded-full object-cover' alt="Comfort Base Logo" />
               <span className='ml-2 text-lg font-semibold hidden sm:block'>Comfort Base</span>
             </Link>
