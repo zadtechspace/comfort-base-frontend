@@ -4,14 +4,13 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(),
-    tailwindcss()
-  ],
- theme:{
-  extended:{
-    colors:{
-      navbar:"rgb(205,189,165)"
-    }
+  plugins: [react(),tailwindcss()],
+  base: '.',
+  theme:{
+    extended:{
+      colors:{
+        navbar:"rgb(205,189,165)"
+      }
   }
  }
 })

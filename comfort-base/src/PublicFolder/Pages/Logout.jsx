@@ -9,7 +9,7 @@ const Logout = () => {
 
      const doLogout= async(Data)=>{
         try {
-           const res=  await fetch("http://localhost:4000/auth/logout",{
+           const res=  await fetch("https://comfort-base-backend.onrender.com/auth/logout",{
                 method:"POST",
                 body:JSON.stringify(Data),
                 headers:{

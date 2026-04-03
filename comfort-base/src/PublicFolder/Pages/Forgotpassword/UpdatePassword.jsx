@@ -14,7 +14,7 @@ const UpdatePassword= () => {
       const updatepass = async(token)=>{
         console.log(data)
          try {
-          const res =await fetch(`http://localhost:4000/auth/forgetpassword/${token}`,{
+          const res =await fetch(`https://comfort-base-backend.onrender.com/auth/forgetpassword/${token}`,{
             method:"POST",
             body:JSON.stringify(token),
             headers:{

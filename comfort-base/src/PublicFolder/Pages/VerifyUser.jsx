@@ -12,7 +12,7 @@ const VerifyUser = () => {
     
     const doverify =async ()=>{
         try {
-            const res = await fetch(`http://localhost:4000/auth/verifyuser/${token}`,{
+            const res = await fetch(`https://comfort-base-backend.onrender.com/auth/verifyuser/${token}`,{
                 method:"POST"
             })
             

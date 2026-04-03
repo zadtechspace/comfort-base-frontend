@@ -46,7 +46,7 @@ const addtocart = async(products)=>{
     //  console.log(cartItem)
 
      try {
-        const res = await fetch("http://localhost:4000/cart/addcart",{
+        const res = await fetch("https://comfort-base-backend.onrender.com/cart/addcart",{
           method:"POST",
           body:JSON.stringify(cartItem),
           headers:{

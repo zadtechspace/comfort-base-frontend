@@ -50,7 +50,7 @@ const signup = async(Data)=>{
               
               setIsSubmitting(true)
               try {
-                  const res = await fetch("http://localhost:4000/auth/register", {
+                  const res = await fetch("https://comfort-base-backend.onrender.com/auth/register", {
                       method: "POST",
                       body: JSON.stringify(Data),
                       headers: {
@@ -211,7 +211,7 @@ const signup = async(Data)=>{
                 <div className="text-center">
                   <p className="text-sm text-gray-600">
                     Already have an account?{' '}
-                    <Link to="/login" className="font-medium text-amber-600 hover:text-amber-500 transition-colors duration-200">
+                    <Link to="/signin" className="font-medium text-amber-600 hover:text-amber-500 transition-colors duration-200">
                       Sign in here
                     </Link>
                   </p>

@@ -57,7 +57,7 @@ const AuthProvider =({children})=>{
     
             // setSubmitting(true)
             try {
-                const res = await fetch("http://localhost:4000/auth/register", {
+                const res = await fetch("https://comfort-base-backend.onrender.com/auth/register", {
                     method: "POST",
                     body: JSON.stringify(formData),
                     headers: {

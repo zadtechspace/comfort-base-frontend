@@ -19,7 +19,7 @@ const Carts = () => {
     try {
 
       setIsLoading(true)
-      const res = await fetch("http://localhost:4000/cart/getcart",{
+      const res = await fetch("https://comfort-base-backend.onrender.com/cart/getcart",{
         method:"GET",
         body:JSON.stringify(),
         headers:{
@@ -57,7 +57,7 @@ const Carts = () => {
      
   
     try {
-      const res = await fetch(`http://localhost:4000/cart/minusqty/${_id}`,{
+      const res = await fetch(`https://comfort-base-backend.onrender.com/cart/minusqty/${_id}`,{
         method:"PUT",  
         })
         
@@ -81,7 +81,7 @@ const Carts = () => {
      
   
     try {
-      const res = await fetch(`http://localhost:4000/cart/plusqty/${_id}`,{
+      const res = await fetch(`https://comfort-base-backend.onrender.com/cart/plusqty/${_id}`,{
         method:"PUT",  
         })
         
@@ -103,7 +103,7 @@ const Carts = () => {
   }
 
   const removeItem = async (_id) => {
-  await fetch(`http://localhost:4000/cart/removecart/${_id}`, {
+  await fetch(`https://comfort-base-backend.onrender.com/cart/removecart/${_id}`, {
     method: "DELETE"
   });
 

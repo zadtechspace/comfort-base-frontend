@@ -18,7 +18,7 @@ const token = localStorage.getItem("jwttoken")
   const doVerifyToken = async(Data)=>{
         try {
           
-          const res = await fetch("http://localhost:4000/auth/verifytoken",{
+          const res = await fetch("https://comfort-base-backend.onrender.com/auth/verifytoken",{
             method:"POST",
             body:JSON.stringify(Data),
             headers:{

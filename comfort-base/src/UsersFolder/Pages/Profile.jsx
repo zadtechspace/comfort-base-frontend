@@ -45,7 +45,7 @@ const Profile = () => {
     try {
     
      
-      const res = await fetch(`http://localhost:4000/user/${_id}`, {
+      const res = await fetch(`https://comfort-base-backend.onrender.com/user/${_id}`, {
         method: 'GET',
         body:JSON.stringify(),
         headers: {

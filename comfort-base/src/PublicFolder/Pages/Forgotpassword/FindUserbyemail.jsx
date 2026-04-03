@@ -21,7 +21,7 @@ const Finduserbyemail = () => {
         // console.log("Form data:", data)
         
         try {
-            const res = await fetch("http://localhost:4000/auth/forgotpassword",{
+            const res = await fetch("https://comfort-base-backend.onrender.com/auth/forgotpassword",{
                 method:"POST",
                 body:JSON.stringify(Data),
                 headers:{
