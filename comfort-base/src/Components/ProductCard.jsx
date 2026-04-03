@@ -72,7 +72,6 @@ function ProductCard({ product }) {
         {product.title}
       </h2>
       <p className="text-gray-500 mt-1">₦{product.price}</p>
-      <p className="text-gray-500 mt-1">{product.category}</p>
       <button className="border border-gray-300 text-gray-700 w-full mt-2 py-2 rounded hover:bg-gray-100 transition">
         View Product
       </button>

@@ -18,9 +18,7 @@ const App = () => {
 
       <Routes>
         <Route path='/*' element={ <PublicLayout/>}/>
-        <Route element={<ProtectedRoute/>}>
-          <Route path='/user/*' element={ <DashboardLayout/>}/>
-        </Route>
+        <Route path='/user/*' element={ <DashboardLayout/>}/>
         <Route path='/admin/*' element={<AdminLayout/>}/>
       </Routes>
         </div>

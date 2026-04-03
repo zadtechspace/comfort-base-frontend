@@ -31,12 +31,10 @@ const token = localStorage.getItem("jwttoken")
         
           const data =await res.json()
         
-          if(data.success){
-            navigate("/user/dashboard")
+          if(!data.success){
+           navigate("/signin")
           }
-          else{
-            navigate("/signin")
-          }
+         
         } catch (error) {
           console.log(error)
         }

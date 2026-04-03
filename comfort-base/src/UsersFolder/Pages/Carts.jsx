@@ -156,7 +156,7 @@ return (
           {/* Info */}
           <div className="flex-1 sm:ml-4 text-center sm:text-left mt-3 sm:mt-0">
             <h3 className="font-semibold text-lg">{product.name}</h3>
-            <p className="text-gray-500">₦{product.price}</p>
+            <p className="text-gray-500">₦{product.productprice}</p>
 
             {/* Quantity Controls */}
             <div className="flex items-center justify-center sm:justify-start gap-3 mt-2">
@@ -198,7 +198,7 @@ return (
           <span>Total:</span>
           <span>
             ₦
-            {viewCartedItems.reduce((acc, product) => acc + product.totalPrice, 0)}
+            {viewCartedItems.reduce((acc, product) => acc + product.totalPrice, 0).toFixed(2)}
           </span>
         </h2>
 

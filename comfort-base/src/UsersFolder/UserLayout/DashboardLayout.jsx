@@ -7,6 +7,7 @@ import Carts from '../Pages/Carts'
 import Profile from '../Pages/Profile'
 import DashboardIndex from "../Pages/DashboardIndex"
 import Checkout from '../Pages/Checkout'
+import ProtectedRoute from '../../Components/ProtectedRoute'
 
 
 const userNavbarItems = [
@@ -57,7 +58,9 @@ const DashboardLayout = () => {
        
         
         <Routes>
-            
+
+            <Route element ={<ProtectedRoute/>}>
+
             <Route path={'/dashboard'} element={<DashboardIndex/>}/>
 
             <Route path={'/products'} element={<Products/>}/>
@@ -65,6 +68,9 @@ const DashboardLayout = () => {
             <Route path={'/cart'} element={<Carts/>}/>
             <Route path={'/profile'} element={<Profile/>}/>
             <Route path={'/checkout'} element={<Checkout/>}/>
+            
+            </Route>
+            
 
             
         </Routes>
