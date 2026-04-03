@@ -72,10 +72,11 @@ function ProductCard({ product }) {
         {product.title}
       </h2>
       <p className="text-gray-500 mt-1">₦{product.price}</p>
+      <p className="text-gray-500 mt-1">{product.category}</p>
       <button className="border border-gray-300 text-gray-700 w-full mt-2 py-2 rounded hover:bg-gray-100 transition">
         View Product
       </button>
-      <button className="bg-black text-white w-full mt-2 py-2 rounded hover:bg-gray-800 transition" onClick={() => addtocart(product)}>
+      <button className="bg-blue-950 text-white w-full mt-2 py-2 rounded hover:bg-gray-800 transition" onClick={() => addtocart(product)}>
         Add to Cart
       </button>
     </div>

@@ -13,10 +13,10 @@ const [selectedCategory, setSelectedCategory] = useState('all');
   const fetchProduct = async () => {
     setIsloading(true);
     try {
-      const res = await fetch('https://api.escuelajs.co/api/v1/products');
+      const res = await fetch('https://dummyjson.com/products');
       const data = await res.json();
-      setProducts(data);
-      console.log(data);
+      setProducts(data.products);
+      console.log(data.products);
     } catch (error) {
       console.log(error);
     } finally {
@@ -36,9 +36,11 @@ const [selectedCategory, setSelectedCategory] = useState('all');
     product.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
     (selectedCategory === 'all' || product.category.name === selectedCategory)
   );
-
+  
   // Get unique categories
-  const categories = ['all', ...new Set(products.map(product => product.category.name))];
+  const categories = ['all', ...new Set(products.map(product => product.category))];
+
+  console.log(categories)
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-stone-100 via-amber-50 to-yellow-50">
